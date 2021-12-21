@@ -1,46 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
 .container-fluid {
     width: 100%;
 }
 
 .container-lg {
-    width: 80%;
+    max-width: 1152px;
+}
+
+.button {
+    padding: 5px 15px;
+    background-color: #0061FF;
+    color: white;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: red;
 }
 
 
 /* - - - HEADER - - - */
 
-header {
-    position: sticky;
-    top: 0;
-}
-
 header .row {
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
-.nav-list {
+header .nav-list {
     list-style: none;
 }
 
-.col-6:first-of-type .nav-list {
+header .col-6:first-of-type .nav-list {
     width: calc(100% - 170px);
 }
 
-.nav-element {
+header .nav-element {
     float: left;
     line-height: 25px;
 }
 
-nav .logo, .nav-list {
+header .logo img {
+    display: block;
+}
+
+header .logo, .nav-list {
     float: left;
 }
 
-nav .logo, .nav-element a{
-    padding-right: 40px;
+header .logo, .nav-element a{
+    margin-right: 30px;
 }
 
-.nav-element:last-of-type a {
-    padding-right: 0;
+header .nav-element a:not(.button) {
+    padding: 2px 5px;
+}
+
+header .nav-element:last-of-type a {
+    margin-right: 0;
 }
 
 header .col-6:last-of-type .nav-list {
@@ -48,9 +69,49 @@ header .col-6:last-of-type .nav-list {
     text-align: right;
 }
 
-.nav-element:hover {
+header .nav-element:hover {
     color: red;
 }
 
 
 /* - - - MAIN - - - */
+
+    /* Jumbotron */
+
+.jumbotron {
+    min-height: 500px;
+    background-color: #B4D0E7;
+    padding-top: 60px;
+    margin-bottom: 50px;
+}
+
+.jumbotron h1 {
+    font-size: calc(28px + 2rem);
+    margin-bottom: 30px;
+}
+
+.jumbotron p {
+    margin-bottom: 30px;
+}
+
+.jumbotron .cta .button {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.jumbotron .cta p {
+    font-size: 0.85rem;
+}
+
+.jumbotron .col-8 {
+    overflow: visible;
+    height: 370px;
+}
+
+.jumbotron .col-8 img {
+    width: 100%;
+}
+
+    /* Section 1 */
+
+
