@@ -1,0 +1,56 @@
+.container-fluid {
+    width: 100%;
+}
+
+.container-lg {
+    width: 80%;
+}
+
+
+/* - - - HEADER - - - */
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+header .row {
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.col-6:first-of-type .nav-list {
+    width: calc(100% - 170px);
+}
+
+.nav-element {
+    float: left;
+    line-height: 25px;
+}
+
+nav .logo, .nav-list {
+    float: left;
+}
+
+nav .logo, .nav-element a{
+    padding-right: 40px;
+}
+
+.nav-element:last-of-type a {
+    padding-right: 0;
+}
+
+header .col-6:last-of-type .nav-list {
+    float: right;
+    text-align: right;
+}
+
+.nav-element:hover {
+    color: red;
+}
+
+
+/* - - - MAIN - - - */

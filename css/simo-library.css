@@ -28,13 +28,13 @@ section {
     width: 100%;
 }
 
-.container {
+[class^="container"] {
     margin: auto;
-    width: 80%;
 }
 
 a {
     text-decoration: none;
+    color: currentColor;
 }
 
 img {
@@ -48,7 +48,13 @@ img {
     width: 100%;
 }
 
-[class^="col-"] {
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row [class^="col"] {
     float: left;
 }
 

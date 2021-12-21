@@ -34,19 +34,19 @@
             background-color: #FBD148;
         }
 
-        .debug-bgc .container {
+        .debug-bgc [class^="container"] {
             background-color: #F9975D;
         }
 
-        .debug-bgc .container > div {
+        .debug-bgc [class^="container"] > div {
             background-color: #C85C5C;
         }
 
-        .debug-bgc .container .col {
+        .debug-bgc [class^="container"] .col {
             background-color: rgb(212, 95, 203);
         }
 
-        .debug-bgc .container > div > * {
+        .debug-bgc [class^="container"] > div > * {
             background-color: #5584AC;
         }
     
@@ -76,16 +76,16 @@
             margin-bottom: 0;
         }
 
-        .debug-spacing .container {
+        .debug-spacing [class^="container"] {
             padding: 30px;
             margin-bottom: 30px;
         }
 
-        .debug-spacing .container:last-child {
+        .debug-spacing [class^="container"]:last-child {
             margin-bottom: 0;
         }
 
-        .debug-spacing header .container {
+        .debug-spacing header [class^="container"] {
             min-height: 30px;
         }
 
