@@ -1,273 +1,328 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 html {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 .container-fluid {
-    width: 100%;
+  width: 100%;
 }
 
 .container-lg {
-    max-width: 1152px;
+  max-width: 1152px;
 }
 
 .container-sm {
-    max-width: 864px;
+  max-width: 864px;
 }
 
 .button {
-    padding: 5px 15px;
-    background-color: #0061FF;
-    color: white;
-    font-weight: 500;
+  padding: 5px 15px;
+  background-color: #0061FF;
+  color: white;
+  font-weight: 500;
 }
 
 .button:hover {
-    background-color: red;
+  background-color: red;
 }
 
 
 /* - - - HEADER - - - */
 
 header .row {
-    padding: 15px 20px;
+  padding: 15px 20px;
 }
 
 header .nav-list {
-    list-style: none;
+  list-style: none;
 }
 
 header .col-6:first-of-type .nav-list {
-    width: calc(100% - 170px);
+  width: calc(100% - 170px);
 }
 
 header .nav-element {
-    float: left;
-    line-height: 25px;
+  float: left;
+  line-height: 25px;
 }
 
 header .logo img {
-    display: block;
+  display: block;
 }
 
 header .logo, .nav-list {
-    float: left;
+  float: left;
 }
 
 header .logo, .nav-element a{
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 header .nav-element a:not(.button) {
-    padding: 2px 5px;
+  padding: 2px 5px;
 }
 
 header .nav-element:last-of-type a {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 header .col-6:last-of-type .nav-list {
-    float: right;
-    text-align: right;
+  float: right;
+  text-align: right;
 }
 
 header .nav-element:hover {
-    color: red;
+  color: red;
 }
 
 
 /* - - - MAIN - - - */
 
-    /* Jumbotron */
+  /* Jumbotron */
 
-.jumbotron {
-    min-height: 500px;
-    background-color: #B4D0E7;
-    padding-top: 80px;
-    margin-bottom: 80px;
+#jumbotron {
+  min-height: 500px;
+  background-color: #B4D0E7;
+  padding-top: 80px;
+  margin-bottom: 80px;
 }
 
-.jumbotron h1 {
-    font-size: calc(28px + 2rem);
-    margin-bottom: 30px;
+#jumbotron h1 {
+  font-size: calc(28px + 2rem);
+  margin-bottom: 30px;
 }
 
-.jumbotron p {
-    margin-bottom: 30px;
+#jumbotron p {
+  margin-bottom: 30px;
 }
 
-.jumbotron .cta .button {
-    margin-bottom: 10px;
-    display: inline-block;
+#jumbotron .cta .button {
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
-.jumbotron .cta p {
-    font-size: 0.85rem;
+#jumbotron .cta p {
+  font-size: 0.85rem;
 }
 
-.jumbotron .col-8 {
-    overflow: visible;
-    height: 370px;
+#jumbotron .col-8 {
+  overflow: visible;
+  height: 370px;
 }
 
-.jumbotron .col-8 img {
-    width: 100%;
+#jumbotron .col-8 img {
+  width: 100%;
 }
 
-    /* Business plans */
+  /* Business plans */
 
 #business-plans {
-    min-height: 500px;
-    /* background-color: #c8e79f; */
-    padding-top: 80px;
-    margin-bottom: 80px;
+  min-height: 500px;
+  padding-top: 80px;
+  margin-bottom: 80px;
 }
 
-h2 {
-    font-size: calc(14px + 1rem);
-    margin-bottom: 40px;
+#business-plans .title-row .title {
+  font-size: calc(14px + 1rem);
+  margin-bottom: 40px;
 }
 
-label {
-    margin-right: 10px;
+#business-plans .title.row label {
+  margin-right: 10px;
 }
 
 input [type="radio"] {
-    /* cambiare tipo aspetto button */
+  /* cambiare tipo aspetto button    <---------  */
 }
 
-.row.title {
-    margin-bottom: 30px;
+#business-plans .title-row {
+  margin-bottom: 30px;
 }
 
-.card-wrapper .col-4 {
-    width: calc((100% - 20px - 20px) * 4 / 12);
-    margin-right: 20px;
-    /* background-color: red; */
+#business-plans .col-4.card {
+  width: calc((100% - 20px - 20px) * 4 / 12);
+  margin-right: 20px;
 }
 
-.card-wrapper .col-4:last-of-type {
-    margin-right: 0;
+#business-plans .col-4.card:nth-child(3n) {
+  margin-right: 0;
 }
 
-.card-header {
-    text-align: center;
-    line-height: 30px;
-    background-color: white;
-    border-bottom: 2px solid #DBDBDB;
-    padding: 3px;
+#business-plans .card-header {
+  text-align: center;
+  line-height: 30px;
+  border-bottom: 2px solid #DBDBDB;
+  padding: 3px;
 }
 
-.card-body span {
-    display: block;
+#business-plans .card-body span {
+  display: block;
 }
 
-.card-list {
-    list-style: none;
+#business-plans .card-list {
+  list-style: none;
 }
 
-.card-element i {
-    padding-right: 5px;
+#business-plans .card-list .card-element i {
+  padding-right: 5px;
 }
 
-.card-body::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 50px;
-    background-color: #DBDBDB;
+#business-plans .card .card-body:not(.col-12 .card-body)::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: #DBDBDB;
 }
 
-.card {
-    border: 2px solid #DBDBDB;
-    min-height: 800px;
+#business-plans .card {
+  border: 2px solid #DBDBDB;
+  min-height: 800px;
+  margin-bottom: 30px;
 }
 
-.card-body {
-    padding: 20px 30px 0 30px;
+#business-plans .card-body {
+  padding: 20px 30px 0 30px;
 }
 
-.card-body .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
-.card-price {
-    font-weight: bold;
-    margin-bottom: 15px;
+#business-plans .card-price {
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.card-info {
-    color: gray;
-    margin-bottom: 40px;
-    font-size: 0.8rem;
+#business-plans .card-info {
+  color: gray;
+  margin-bottom: 40px;
+  font-size: 0.8rem;
 }
 
-.card-body .card-element {
-    margin-bottom: 15px;
-    font-size: 0.8rem;
+#business-plans .card-body .card-element {
+  margin-bottom: 15px;
+  font-size: 0.8rem;
 }
 
-.card-body .card-list {
-    margin-bottom: 40px;
+#business-plans .card-body .card-list {
+  margin-bottom: 40px;
 }
 
-.card .cta .button {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
+#business-plans .card .cta {
+   text-align: center;
 }
 
-.card p {
-    font-size: 0.9rem;
+#business-plans .cta .button {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.card p a {
-    color: #0061FF;
-    text-decoration: underline;
+#business-plans p {
+  font-size: 0.9rem;
 }
 
-.card p a:hover {
-    color: red;
+#business-plans p a {
+  color: #0061FF;
+  text-decoration: underline;
 }
 
-.card .cta {
-    margin-bottom: 30px;
+#business-plans p a:hover {
+  color: red;
 }
 
-.card-footer .card-title {
-    font-size: 1rem;
-    margin-bottom: 15px;
+#business-plans .cta {
+  margin-bottom: 30px;
 }
 
-.card-footer {
-    padding: 30px 30px 0 30px;
+#business-plans .card-footer .card-title {
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-/* ricontrollare codice */
-
-.card-footer .card-element {
-    margin-bottom: 15px;
-    font-size: 0.8rem;
-    line-height: 1.1rem;
-
-    /* Corretto? */
-    padding-left: 1rem;
-    text-indent: -1rem;
+#business-plans .card-footer {
+  padding: 30px 30px 0 30px;
 }
 
-.card-footer .card-element::before {
-    content: "\2713";
-    padding-right: 5px;
-    font-weight: bolder;
-    font-size: 1.1rem;
-    color: #0061FF;
+#business-plans .card-footer .card-element {
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  padding-left: 1rem;
+  text-indent: -1rem;
 }
 
-.card-footer .card-list {
-    margin-left: 0;
-    padding-left: 0;
-    margin-bottom: 30px;
+#business-plans .card-footer .card-element::before {
+  content: "\2713";
+  padding-right: 5px;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  color: #0061FF;
+}
+
+#business-plans .card-footer .card-list {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+#business-plans .col-12 {
+   min-height: 180px;
+}
+
+#business-plans .col-12 h5, .col-12 .cta {
+   float: left;
+   width: 50%;
+}
+
+#business-plans .col-12 .cta {
+   text-align: right;
+   margin-bottom: 15px;
+}
+
+#business-plans .col-12 .button {
+   margin: 0;
+   padding: 5px 60px;
+}
+
+#business-plans .col-12 h5 {
+   line-height: 29px;
+}
+
+#business-plans .col-12 .card-footer {
+   padding-top: 0;
+}
+
+   /* Trova partner */
+
+#trova-partner {
+   padding-top: 80px;
+   margin-bottom: 80px;
+}
+
+#trova-partner p {
+   line-height: 2;
+   margin-bottom: 30px;
+}
+
+#trova-partner .card {
+   padding: 30px;
+}
+
+#trova-partner .button {
+   /* display: inline-block; */
+   padding: 10px 20px;
+   color: black;
+   background-color: white;
+   border: 1px solid black;
+}
+
+#trova-partner .button:hover {
+   color: white;
+   border-color: white;
+   background-color: red;
 }
