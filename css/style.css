@@ -10,22 +10,152 @@ html {
 }
 
 .container-lg {
-  max-width: 1152px;
+  max-width: 1180px;
 }
 
 .container-sm {
-  max-width: 864px;
+  max-width: 960px;
 }
 
-.button {
-  padding: 5px 15px;
-  background-color: #0061FF;
-  color: white;
-  font-weight: 500;
+.btn {
+   padding: 6px 15px;
+   font-size: 14px;
+   font-weight: bold;
 }
 
-.button:hover {
+.btn--default {
+   background-color: #0061FF;
+   color: white;
+}
+
+.btn--white {
+   color: black;
+   background-color: white;
+}
+
+.btn:hover {
   background-color: red;
+  color: white;
+}
+
+ul {
+   list-style: none;
+}
+
+a:hover {
+   color: red;
+}
+
+h1 {
+   font-size: 5rem;
+   font-weight: bold;
+}
+
+h2 {
+   font-size: 2.6rem;
+   font-weight: bold;
+}
+
+h3 {
+   font-size: 2rem;
+   font-weight: bold;
+}
+
+h4 {
+   font-size: 1.6rem;
+   font-weight: bold;
+}
+
+h5 {
+   font-size: 1.3rem;
+   font-weight: bold;
+}
+
+h6 {
+   font-size: 1rem;
+   font-weight: bold;
+}
+
+.hr-sm::after {
+   content: "";
+   display: block; /* sballa la dimensione della section partners */
+   height: 2px;
+   width: 50px;
+   background-color: #E6E6E7;
+}
+
+.hr-lg::after {
+   content: "";
+   display: block;
+   height: 2px;
+   width: 100px;
+   background-color: #E6E6E7;
+}
+
+
+/* RADIO BUTTON */
+
+/* Contenitore radio btn */
+.input-wrapper {
+   position: relative;
+   padding-left: 25px;
+   margin-right: 30px;
+   cursor: pointer;
+}
+
+/* Nasconde radio btn di default */
+.input-wrapper input {
+   display: none;
+}
+
+/* Custom radio btn */
+.input-wrapper .checkmark {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%);
+   height: 100%;
+   aspect-ratio: 1 / 1;
+}
+
+.input-wrapper .checkmark-bg, .input-wrapper .checkmark-inner {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 50%;
+}
+
+.input-wrapper .checkmark-bg {
+   border: 1px solid #ccc;
+}
+
+/* Stile cerchio esterno */
+.input-wrapper .checkmark-inner {
+   display: none;
+   width: 9px;
+   height: 9px;
+   background: white;
+}
+
+.input-wrapper:hover .checkmark-bg {
+   background-color: #ccc;
+}
+
+/* Radio btn checked --> blu */
+.input-wrapper input:checked ~ .checkmark .checkmark-bg {
+   background-color: #2196F3;
+   border-color: #2196F3;
+}
+
+.input-wrapper input:checked:hover ~ .checkmark .checkmark-bg {
+   background-color: #1875c2;
+}
+
+.input-wrapper input:checked ~ .checkmark .checkmark-inner {
+   display: block;
 }
 
 
@@ -35,80 +165,69 @@ header .row {
   padding: 15px 20px;
 }
 
-header .nav-list {
-  list-style: none;
+header .col-6:first-of-type .nav-list {
+   width: calc(100% - 170px);
+   /* il logo ha 170px di larghezza */
 }
 
-header .col-6:first-of-type .nav-list {
-  width: calc(100% - 170px);
+header .logo, header .nav-list, header .nav-element {
+   float: left;
+ }
+
+header .logo img {
+   display: block;
 }
 
 header .nav-element {
-  float: left;
   line-height: 25px;
 }
 
-header .logo img {
-  display: block;
-}
-
-header .logo, .nav-list {
-  float: left;
-}
-
-header .logo, .nav-element a{
+header .logo, header .nav-link{
   margin-right: 30px;
 }
 
-header .nav-element a:not(.button) {
+header .nav-link {
   padding: 2px 5px;
 }
 
-header .nav-element:last-of-type a {
+header .nav-element:last-of-type .nav-link {
   margin-right: 0;
 }
 
 header .col-6:last-of-type .nav-list {
   float: right;
-  text-align: right;
-}
-
-header .nav-element:hover {
-  color: red;
 }
 
 
 /* - - - MAIN - - - */
 
-  /* Jumbotron */
+  /* Section Jumbotron */
 
 #jumbotron {
   min-height: 500px;
   background-color: #B4D0E7;
-  padding-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 60px;
 }
 
 #jumbotron h1 {
-  font-size: calc(28px + 2rem);
   margin-bottom: 30px;
 }
 
 #jumbotron p {
   margin-bottom: 30px;
+  line-height: 25px;
 }
 
-#jumbotron .cta .button {
+#jumbotron .cta-wrapper .btn {
   margin-bottom: 10px;
   display: inline-block;
 }
 
-#jumbotron .cta p {
+#jumbotron .cta-wrapper p {
   font-size: 0.85rem;
 }
 
 #jumbotron .col-8 {
-  overflow: visible;
   height: 370px;
 }
 
@@ -116,29 +235,18 @@ header .nav-element:hover {
   width: 100%;
 }
 
-  /* Business plans */
+  /* Section Business Plans */
 
 #business-plans {
-  min-height: 500px;
-  padding-top: 80px;
-  margin-bottom: 80px;
-}
-
-#business-plans .title-row .title {
-  font-size: calc(14px + 1rem);
-  margin-bottom: 40px;
-}
-
-#business-plans .title.row label {
-  margin-right: 10px;
-}
-
-input [type="radio"] {
-  /* cambiare tipo aspetto button    <---------  */
+  padding-top: 140px;
 }
 
 #business-plans .title-row {
   margin-bottom: 30px;
+}
+
+#business-plans h2 {
+   margin-bottom: 30px;
 }
 
 #business-plans .col-4.card {
@@ -153,7 +261,7 @@ input [type="radio"] {
 #business-plans .card-header {
   text-align: center;
   line-height: 30px;
-  border-bottom: 2px solid #DBDBDB;
+  border-bottom: 2px solid #E6E6E7;
   padding: 3px;
 }
 
@@ -161,24 +269,23 @@ input [type="radio"] {
   display: block;
 }
 
-#business-plans .card-list {
-  list-style: none;
+#business-plans .list-element {
+   position: relative;
+ }
+
+#business-plans .list-element p {
+  padding-left: 22px;
 }
 
-#business-plans .card-list .card-element i {
-  padding-right: 5px;
-}
-
-#business-plans .card .card-body:not(.col-12 .card-body)::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 50px;
-  background-color: #DBDBDB;
-}
+#business-plans .list-element i {
+   position: absolute;
+   left: 0;
+   line-height: 17px;
+   font-size: 1.2em;
+ }
 
 #business-plans .card {
-  border: 2px solid #DBDBDB;
+  border: 2px solid #E6E6E7;
   min-height: 800px;
   margin-bottom: 30px;
 }
@@ -187,8 +294,7 @@ input [type="radio"] {
   padding: 20px 30px 0 30px;
 }
 
-h5 {
-  font-size: 1.5rem;
+#business-plans h4 {
   margin-bottom: 15px;
 }
 
@@ -200,15 +306,15 @@ h5 {
 #business-plans .card-info {
   color: gray;
   margin-bottom: 40px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
-#business-plans .card-body .card-element {
+#business-plans .list-element {
   margin-bottom: 15px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
-#business-plans .card-body .card-list {
+#business-plans .card-list {
   margin-bottom: 40px;
 }
 
@@ -216,15 +322,16 @@ h5 {
    text-align: center;
 }
 
-#business-plans .cta .button {
-  display: inline-block;
+#business-plans .cta .btn {
+  display: block;
   text-align: center;
   margin-bottom: 30px;
 }
 
-#business-plans p {
-  font-size: 0.9rem;
-}
+#business-plans .cta p {
+   text-align: left;
+   font-size: 0.85rem;
+ }
 
 #business-plans p a {
   color: #0061FF;
@@ -239,8 +346,7 @@ h5 {
   margin-bottom: 30px;
 }
 
-#business-plans .card-footer .card-title {
-  font-size: 1rem;
+#business-plans h6 {
   margin-bottom: 15px;
 }
 
@@ -248,15 +354,15 @@ h5 {
   padding: 30px 30px 0 30px;
 }
 
-#business-plans .card-footer .card-element {
+#business-plans .card-footer .list-element {
   margin-bottom: 15px;
-  font-size: 0.8rem;
+  font-size: 0.93rem;
   line-height: 1.5rem;
   padding-left: 1rem;
   text-indent: -1rem;
 }
 
-#business-plans .card-footer .card-element::before {
+#business-plans .card-footer .list-element::before {
   content: "\2713";
   padding-right: 5px;
   font-weight: bolder;
@@ -270,11 +376,12 @@ h5 {
   margin-bottom: 30px;
 }
 
-#business-plans .col-12 {
+#business-plans .col-12:not(.title-row .col-12) {
    min-height: 180px;
+   margin-bottom: 0;
 }
 
-#business-plans .col-12 h5, .col-12 .cta {
+#business-plans .col-12 h4, .col-12 .cta {
    float: left;
    width: 50%;
 }
@@ -284,12 +391,13 @@ h5 {
    margin-bottom: 15px;
 }
 
-#business-plans .col-12 .button {
+#business-plans .col-12 .btn {
    margin: 0;
    padding: 5px 60px;
+   display: inline-block;
 }
 
-#business-plans .col-12 h5 {
+#business-plans .col-12 h4 {
    line-height: 29px;
 }
 
@@ -297,11 +405,14 @@ h5 {
    padding-top: 0;
 }
 
-   /* Trova partner */
+   /* Section Trova Partner */
 
 #trova-partner {
-   padding-top: 80px;
-   margin-bottom: 80px;
+   padding-top: 140px;
+}
+
+#trova-partner h4 {
+   margin-bottom: 20px;
 }
 
 #trova-partner p {
@@ -313,16 +424,268 @@ h5 {
    padding: 30px;
 }
 
-#trova-partner .button {
-   /* display: inline-block; */
+#trova-partner .btn {
    padding: 10px 20px;
-   color: black;
-   background-color: white;
    border: 1px solid black;
 }
 
-#trova-partner .button:hover {
+#trova-partner .btn:hover {
+   border: none;
+}
+
+#trova-partner img {
+   display: block;
+}
+
+   /* Section Features */
+
+#features {
+   padding-top: 140px;
+}
+
+#features h2 {
+   margin-bottom: 40px;
+}
+
+#features h4 {
+   margin-bottom: 20px;
+}
+
+#features .col-4 {
+   width: calc((100% - 20px - 20px) / 3);
+   min-height: 420px;
+   margin-bottom: 50px;
+   margin-right: 20px;
+}
+
+#features .col-4:nth-child(3n) {
+   margin-right: 0;
+}
+
+#features .col-4:nth-child(n+4) {
+   margin-bottom: 0;
+}
+
+#features .card-img{
+   display: block;
+   object-fit: contain;
+   object-position: center;
+}
+
+#features .img-wrapper {
+   width: 100%;
+}
+
+   /* Section Partners */
+
+#partners {
+   padding-top: 140px;
+}
+
+#partners .title-row {
+   margin-bottom: 40px;
+}
+
+#partners .title-row .col-12 {
+   padding-right: 45%;
+}
+
+#partners .title-row h2 {
+   margin-bottom: 30px;
+}
+
+#partners .title-row a {
+   text-decoration: underline;
+   color: #0061FF;
+}
+
+#partners .title-row a:hover {
+   color: red;
+ }
+
+#partners .partners-panel .col-6 {
+   aspect-ratio: 1 / 1;
+   position: relative;
+}
+
+#partners .partners-panel img {
+   object-position: center;
+   /* Filtro applicato per modificare colore .svg */
+   filter: invert(92%) sepia(0%) saturate(7469%) hue-rotate(52deg) brightness(115%) contrast(106%);
+}
+
+#partners .partners-panel .img-wrapper {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#partners .description {
+   background-color: #F5F5F5;
+   padding: 60px;
+   aspect-ratio: 2 / 1;
+}
+
+#partners .description .img-wrapper {
+   margin-bottom: 30px;
+}
+
+#partners .description img {
+   display: block;
+}
+
+#design-it {
+   background-color: #D0E9CD;
+   position: relative;
+}
+
+#partners .hr-sm::after {
+   margin-top: 30px;
+}
+
+   /* Per creare effetto "selected" */
+#design-it::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   bottom: 5%;
+   right: 5%;
+   background-color: #A2D39B;
+}
+
+#asu {
+   background-color: #61082B;
+}
+
+#uf {
+   background-color: #0093CE;
+}
+
+#topps {
+   background-color: #FF1C1C;
+}
+
+#bcr {
+   background-color: #D5001F;
+}
+
+#hearst {
+   background-color: #B4D0E7;
+}
+
+#lonely-planet {
+   background-color: #0D2481;
+}
+
+#clear-channel {
+   background-color: #FFD830;
+}
+
+
+#clear-channel img {
+   /* Riga necessaria solo per questa immagine, perché? */
+   width: 100%;
+}
+
+#partners .description img {
+   height: 50px;
+}
+
+#partners .description p span{
+   margin-top: 30px;
+   display: inline-block;
+}
+
+   /* Section Prova Gratuita */
+
+#prova-gratuita {
+   padding: 80px 0;
+   background-color: #B4D0E7;
+}
+
+#prova-gratuita [class^="col-"] {
+   min-height: 5px;
+}
+
+#prova-gratuita h2 {
+   color: #661537;
+   padding-right: 170px;
+}
+
+#prova-gratuita .col-4 {
+   text-align: right;
+}
+
+#prova-gratuita .btn {
+   line-height: 30px;
+   padding: 6px 50px;
+}
+
+   /* FAQ */
+
+#faq {
+   padding-top: 80px;
+   margin-bottom: 80px;
+}
+
+#faq h3 {
+   padding-bottom: 50px;
+   border-bottom: 2px solid #E6E6E7;
+}
+
+#faq .col-12:nth-child(n+2) {
+   line-height: 80px;
+   border-bottom: 2px solid #E6E6E7;
+   position: relative;
+}
+
+#faq .col-12 i {
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   transform: translate(0,-50%);
+}
+   
+/* FOOTER */
+footer section {
+   background-color: black;
+   padding: 80px 0;
+}
+
+.footer-col {
+   float: left;
+   width: calc(100% / 5);
+   min-height: 250px;
    color: white;
-   border-color: white;
-   background-color: red;
+}
+
+footer h5 {
+   margin-bottom: 20px;
+}
+
+.footer-col a {
+   color: currentColor;
+   font-size: 0.9rem;
+   line-height: 25px;
+}
+
+.footer-col a:hover {
+   color: red;
+}
+
+footer .row:first-child {
+   margin-bottom: 50px;
+}
+
+footer select {
+   background: none;
+   border: none;
+   color: #E6E6E7;
+}
+
+footer i {
+   color: #E6E6E7;
 }
